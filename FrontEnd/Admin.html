@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Navigation</title>
+    <link rel="stylesheet" href="Admin.css">
+</head>
+<body>
+    <div class="navbar">
+        <a class="nav-item" href="javascript:void(0);" onclick="changePage(1)">System Overview</a>
+        <a class="nav-item" href="javascript:void(0);" onclick="changePage(2)">User Engineer Management</a>
+        <a class="nav-item" href="javascript:void(0);" onclick="changePage(3)">Ticket Listing</a>
+        <a class="nav-item" href="javascript:void(0);" onclick="changePage(4)">Settings</a>
+    </div>
+    
+    <div class="content active" id="page1">
+     <div id="system">
+    <div class="dashboard-container">
+        <h1>System Overview</h1>
+        <div class="metric">
+            <div class="metric-icon">
+                <i class="fas fa-chart-pie"></i>
+            </div>
+            <div class="metric-details">
+                <h2>System Load</h2>
+                <p>Current Load: 75%</p>
+            </div>
+        </div>
+        <div class="metric">
+            <div class="metric-icon">
+                <i class="fas fa-database"></i>
+            </div>
+            <div class="metric-details">
+                <h2>Database Usage</h2>
+                <p>Storage Used: 50%</p>
+            </div>
+        </div>
+        <div class="metric">
+            <div class="metric-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="metric-details">
+                <h2>Users</h2>
+                <p>Total Users: 1,000</p>
+            </div>
+        </div>
+    </div>
+      </div>
+      </div>
+    
+<!--       USER & ENGINEER CODE -->
+    <div class="content" id="page2">
+      <div  id="user" >
+      <div class="user-management">
+        <h1>User & Engineer Management</h1>
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Users and engineers will be displayed here -->
+            </tbody>
+        </table>
+        <form id="add-user-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+                <option value="User">User</option>
+                <option value="Engineer">Engineer</option>
+            </select>
+            <button type="submit">Add User/Engineer</button>
+        </form>
+    </div>
+    </div>
+      
+    </div>
+<!--   TICKET PAGE CODE -->
+    <div class="content" id="page3">
+      <div id="ticket">
+      <h1>Ticket Management System</h1>
+    
+    <button id="open-ticket-form">Create New Ticket</button>
+
+    <div id="ticket-form" class="popup">
+        <div class="popup-content">
+            <span id="close-ticket-form" class="close-popup">&times;</span>
+            <h2>Create New Ticket</h2>
+            <form>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="Open">Open</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Closed">Closed</option>
+                </select>
+
+                <button type="submit" id="submit-ticket">Create</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="ticket-list">
+        <h2>Ticket List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="ticket-rows">
+                <!-- Ticket rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    </div>
+      </div>
+  
+<!--   SETTINGS-CODE -->
+    <div class="content" id="page4">
+     <div id="settings">
+       <div class="settings-container">
+        <h1>System Settings</h1>
+        <div class="setting">
+            <label for="theme">Select Theme:</label>
+            <select id="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+        <div class="setting">
+            <label for="language">Select Language:</label>
+            <select id="language">
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+            </select>
+        </div>
+        <div class="setting">
+            <label for="notifications">Enable Notifications:</label>
+            <input type="checkbox" id="notifications">
+        </div>
+        <button id="save-settings">Save Settings</button>
+    </div>
+    </div>
+      </div>
+</body>
+<script src="./Admin.js"></script>
+</html>

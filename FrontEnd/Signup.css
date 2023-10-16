@@ -1,0 +1,66 @@
+/* Styling the body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling the login box */
+#SignUpBox {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+}
+
+
+/* Styling the heading */
+h1 {
+    color: #333;
+}
+
+/* Styling the input fields */
+input {
+    width: 70%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Styling the login button */
+#SignUp {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+#login {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#SignUp:hover {
+    background-color: #0056b3;
+}
+
+
+
+
